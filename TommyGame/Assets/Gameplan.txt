@@ -1,0 +1,28 @@
+Steps to Complete Tommy's game
+
+Parts needed:
+    1. Main Menu
+    2. Game Selection Screen
+    3. Actual Game Scenes, "Scenarios"
+
+
+Main Menu:
+- Play | -> Takes to Game Selection Screen (different Scene)
+- Quit | Closes gamne
+
+
+Game Selection Screen
+- Game Selection Container, fits all of the different ones
+    Could be scroll, tiles, etc
+- Click one to enter the Gameplay Scene
+
+
+Gameplay Scene
+- Load a "Scenario" prefab? <- this one, or maybe we can use a scriptable object + a template
+- each Scenario its own scene?
+
+
+
+
+
+
