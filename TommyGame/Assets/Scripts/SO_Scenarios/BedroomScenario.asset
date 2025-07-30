@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd83e1554dd3b3478119820e1d405ef, type: 3}
+  m_Name: BedroomScenario
+  m_EditorClassIdentifier: 
+  levelPrefab: {fileID: 1375574050318742093, guid: a065720f73068834092116bf74c29170,
+    type: 3}
+  option1Scenario: {fileID: 11400000, guid: 4bf3a70aacaf27f418100caef4de1510, type: 2}
+  option2Scenario: {fileID: 11400000, guid: 610250277ebec7f4ba22ff319a18fd42, type: 2}
+  option1Positions:
+  - {x: -8.5, y: 0.5}
+  option2Positions: []
+  option1Text: Call 911 and open the window
+  option2Text: Call 911 and wait
+  scenarioDialogue:
+  - I'd better get help immediately!
+  option1Dialogue:
+  - '*Calling 911...*'
+  - '911: Hello sir, is this an emergency?'
+  - 'You: Yes, my house is on fire!'
+  - '911: We''ll be there right away.'
+  - '911: Open all the windows!'
+  option2Dialogue:
+  - '*Calling 911...*'
+  - '911: Hello sir, is this an emergency?'
+  - 'You: Yes, my house is on fire!'
+  - '911: We''ll be there right away.'
+  - ...
+  - ..
+  decisionTime: 20
+  isCutscene: 0
+  isEnding: 0
+  playerMoveSpeed: 0.8
+  playerStartPosition: {x: 0, y: -3}
+  playerScale: {x: 1, y: 1}

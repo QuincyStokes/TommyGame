@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd83e1554dd3b3478119820e1d405ef, type: 3}
+  m_Name: BedroomWaiting
+  m_EditorClassIdentifier: 
+  levelPrefab: {fileID: 1375574050318742093, guid: ddb5cf9763efab849b0c43a7a5044292,
+    type: 3}
+  option1Scenario: {fileID: 0}
+  option2Scenario: {fileID: 0}
+  option1Positions: []
+  option2Positions: []
+  option1Text: 
+  option2Text: 
+  scenarioDialogue:
+  - I'll just wait for help..
+  - ...
+  - Uh oh, maybe I should have opened the windows!
+  option1Dialogue: []
+  option2Dialogue: []
+  decisionTime: 0
+  isCutscene: 0
+  isEnding: 1
+  playerMoveSpeed: 0
+  playerStartPosition: {x: 0, y: -3}
+  playerScale: {x: 1, y: 1}

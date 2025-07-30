@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd83e1554dd3b3478119820e1d405ef, type: 3}
+  m_Name: RunToClosetScenario
+  m_EditorClassIdentifier: 
+  levelPrefab: {fileID: 5968530019716713061, guid: 19144355e074dad429c403c8a6327b48,
+    type: 3}
+  option1Scenario: {fileID: 11400000, guid: 1b21e6ffcb7d4f34a862533748279f68, type: 2}
+  option2Scenario: {fileID: 11400000, guid: 1b21e6ffcb7d4f34a862533748279f68, type: 2}
+  option1Positions:
+  - {x: -4.5, y: -4.5}
+  option2Positions: []
+  option1Text: 
+  option2Text: 
+  scenarioDialogue: []
+  decisionTime: 0
+  isCutscene: 1
+  isEnding: 0
+  playerMoveSpeed: 0
+  playerStartPosition: {x: 12, y: -4.5}
