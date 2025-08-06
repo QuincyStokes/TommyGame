@@ -16,6 +16,7 @@ MonoBehaviour:
     type: 3}
   option1Scenario: {fileID: 0}
   option2Scenario: {fileID: 0}
+  scenarioStartPositions: []
   option1Positions: []
   option2Positions: []
   option1Text: 
@@ -24,8 +25,11 @@ MonoBehaviour:
   - Hopefully I'm safe here.
   - What's that smell?
   - Maybe this was a bad idea...
+  option1Dialogue: []
+  option2Dialogue: []
   decisionTime: 0
   isCutscene: 0
   isEnding: 1
   playerMoveSpeed: 0
-  playerStartPosition: {x: 0, y: 0}
+  playerStartPosition: {x: 0, y: -6}
+  playerScale: {x: 2, y: 2}

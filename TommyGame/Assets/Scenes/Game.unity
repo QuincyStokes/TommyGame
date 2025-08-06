@@ -2023,8 +2023,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgMusicSource: {fileID: 268574233}
-  firstBgMusic: {fileID: 8300000, guid: b75f39178b22ee5408c3c3e00b6ad461, type: 3}
-  initialDelay: 3
+  firstBgMusic: {fileID: 8300000, guid: b1f9192c57c3e3243a199f74ba6e75eb, type: 3}
+  intenseBgMusic: {fileID: 8300000, guid: b75f39178b22ee5408c3c3e00b6ad461, type: 3}
+  initialDelay: 8
+  transitionTime: 1.5
 --- !u!4 &1907533440
 Transform:
   m_ObjectHideFlags: 0
@@ -2614,7 +2616,7 @@ PrefabInstance:
     - target: {fileID: 5127230256561456478, guid: f5c309a339c7cd84a83f722756dab9ae,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 5127230256561456478, guid: f5c309a339c7cd84a83f722756dab9ae,
         type: 3}
@@ -2660,6 +2662,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144533695409322075, guid: f5c309a339c7cd84a83f722756dab9ae,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

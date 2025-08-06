@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 
     public void Initialize(Vector3 startPos, Vector3 startScale)
     {
+        gameObject.SetActive(true);
         transform.position = startPos;
         transform.localScale = startScale;
     }
