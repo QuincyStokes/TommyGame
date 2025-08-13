@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GameSelection.unity
     guid: 09d06c1d647229d49b3c52f243d99d5b
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/FireGame.unity
     guid: 788f0092a7371cc4a871a393f43c2b3a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
