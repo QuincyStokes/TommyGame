@@ -187,6 +187,15 @@ public class ScenarioManager : MonoBehaviour
         }
 
         //if we get here, that means the timer ended without them choosing an option. Game Over
+
+        GameOver();
+    }
+
+    private void GameOver()
+    {
+        CleanupCurrentScenario();
+        HideButtons();
+        continueScreen.SetActive(true);
     }
 
     private void CleanupCurrentScenario()
