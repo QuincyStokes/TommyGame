@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      002 - sCloset001_hurt_0: 1172652042395017420
+      002 - sCloset001_hurt_1: -3313244017845328199
+      002 - sCloset001_hurt_2: -1119904574516626160
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

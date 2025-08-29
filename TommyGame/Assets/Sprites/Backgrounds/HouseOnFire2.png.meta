@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7236079922bfbda498f954e22a87b479
+guid: 96b6b1337e3aac14d809450ebaabb7b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7324266939153875122
-    second: 002 - sChair001_back_0
+      213: -2536514927108212175
+    second: HouseOnFire2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 002 - sChair001_back_0
+      name: HouseOnFire2_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 2
-        width: 52
-        height: 47
+        x: 0
+        y: 0
+        width: 1536
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4f7893460afa5a90800000000000000
-      internalID: -7324266939153875122
+      spriteID: 13a3d32ec1d7cccd0800000000000000
+      internalID: -2536514927108212175
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      002 - sChair001_back_0: -7324266939153875122
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

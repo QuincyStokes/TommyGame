@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      010 - sBed001_destroyFront_idle_0: 4851431805953293283
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

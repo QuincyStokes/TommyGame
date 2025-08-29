@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdd83e1554dd3b3478119820e1d405ef, type: 3}
-  m_Name: BedroomWindow
+  m_Name: FireSuccessScenario
   m_EditorClassIdentifier: 
-  levelPrefab: {fileID: 9187952548014043129, guid: c14a07388c84bca4bae39aa9dbb7a60c,
+  levelPrefab: {fileID: 8963732126368636532, guid: 97c855368acb9c442aafae1e1fc3183d,
     type: 3}
-  option1Scenario: {fileID: 11400000, guid: 5783a54626873d84299d6362819e06f0, type: 2}
+  option1Scenario: {fileID: 0}
   option2Scenario: {fileID: 0}
   scenarioStartPositions: []
   option1Positions: []
@@ -22,13 +22,13 @@ MonoBehaviour:
   option1Text: 
   option2Text: 
   scenarioDialogue:
-  - Help!!
-  - Help!!
+  - Thank goodness, I made all the right decisions!
   option1Dialogue: []
   option2Dialogue: []
   decisionTime: 0
-  isCutscene: 1
-  isEnding: 0
+  isCutscene: 0
+  isBadEnding: 0
+  isGoodEnding: 1
   playerMoveSpeed: 0
-  playerStartPosition: {x: -2.5, y: -8}
-  playerScale: {x: 2, y: 2}
+  playerStartPosition: {x: -7, y: -6}
+  playerScale: {x: 0.6, y: 0.6}

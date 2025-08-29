@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScenarioManager : MonoBehaviour
@@ -18,6 +19,7 @@ public class ScenarioManager : MonoBehaviour
     public GameObject dialogueParent;
     public TMP_Text timeRemaining;
     public GameObject continueScreen;
+    public Image blackScreen;
 
     //* ------------------- Scenarios ------------------------- */
     [Header("Scenarios")]
@@ -25,6 +27,7 @@ public class ScenarioManager : MonoBehaviour
     public Scenario currentScenario;
     //* ---------------- Settings --------------- */
     public float textSpeed;
+    public float fadeTime;
 
     //* -------------- Player ---------- */
     public Player player;
@@ -139,20 +142,25 @@ public class ScenarioManager : MonoBehaviour
             dialogueText.text = "";
         }
         dialogueParent.SetActive(false);
-        if (!currentScenario.isCutscene && !currentScenario.isEnding)
+        if (!currentScenario.isCutscene && !currentScenario.isGoodEnding && !currentScenario.isBadEnding)
         {
             ShowButtons();
             timerCoroutine = StartCoroutine(DoScenarioTimer(currentScenario.decisionTime));
         }
-        
-        if(currentScenario.isCutscene)
+
+        if (currentScenario.isCutscene)
         {
             StartCoroutine(PlayCutscene());
         }
 
-        if (currentScenario.isEnding)
+        if (currentScenario.isBadEnding)
         {
             continueScreen.SetActive(true);
+        }
+
+        if (currentScenario.isGoodEnding)
+        {
+            StartCoroutine(FadeToBlack());
         }
 
     }
@@ -189,6 +197,22 @@ public class ScenarioManager : MonoBehaviour
         //if we get here, that means the timer ended without them choosing an option. Game Over
 
         GameOver();
+    }
+
+    private IEnumerator FadeToBlack()
+    {
+        float elapsed = 0f;
+
+        while (elapsed < fadeTime)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / fadeTime;
+
+            blackScreen.color = new Color(0, 0, 0, t);
+            yield return null;
+        }
+        CleanupCurrentScenario();
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void GameOver()

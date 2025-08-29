@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      003 - sChair001_hurtFront_0: 7662132788234014403
+      003 - sChair001_hurtFront_1: -7319775761762325480
+      003 - sChair001_hurtFront_2: 5753483036435480541
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

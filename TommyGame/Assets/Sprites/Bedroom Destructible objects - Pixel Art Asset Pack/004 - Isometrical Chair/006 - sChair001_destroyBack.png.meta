@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      006 - sChair001_destroyBack_0: -324044046701518759
+      006 - sChair001_destroyBack_1: 777102661544985640
+      006 - sChair001_destroyBack_2: -7428010607048365170
+      006 - sChair001_destroyBack_3: 8944944715753495722
+      006 - sChair001_destroyBack_4: -7866116760613263320
+      006 - sChair001_destroyBack_5: 5558366954855846320
+      006 - sChair001_destroyBack_6: 9008755292700873224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

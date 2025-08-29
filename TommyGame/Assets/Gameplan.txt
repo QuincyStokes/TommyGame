@@ -1,25 +1,16 @@
-Steps to Complete Tommy's game
+Tommy's Game TODO List
 
-Parts needed:
-    1. Main Menu
-    2. Game Selection Screen
-    3. Actual Game Scenes, "Scenarios"
+1. Create logic for portrait images along with dialogue
+2. No more fade to black,   
+    a. Current scenario turns into an image, zooms out and appears inside of a picture frame
+    b. Says "you completed the challenge"
+    c. Loads back to scenario   (this all takes place in the GoodEnding logic in the manager)
+3. Run through and try to break the game to find bugs
 
-
-Main Menu:
-- Play | -> Takes to Game Selection Screen (different Scene)
-- Quit | Closes gamne
-
-
-Game Selection Screen
-- Game Selection Container, fits all of the different ones
-    Could be scroll, tiles, etc
-- Click one to enter the Gameplay Scene
+4. Start next scenario (flood)
 
 
-Gameplay Scene
-- Load a "Scenario" prefab? <- this one, or maybe we can use a scriptable object + a template
-- each Scenario its own scene?
+
 
 
 

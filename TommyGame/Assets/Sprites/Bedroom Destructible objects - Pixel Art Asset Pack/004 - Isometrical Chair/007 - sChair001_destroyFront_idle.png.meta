@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      007 - sChair001_destroyFront_idle_0: 2976642263643857294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

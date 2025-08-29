@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      007- sTV001_destroyFront_0: 3880291839120024244
+      007- sTV001_destroyFront_1: 4285155928520818389
+      007- sTV001_destroyFront_2: -5502949144459191303
+      007- sTV001_destroyFront_3: -3567531205463035021
+      007- sTV001_destroyFront_4: -7008659486308431460
+      007- sTV001_destroyFront_5: -3394963064544757202
+      007- sTV001_destroyFront_6: 3574689550227103478
+      007- sTV001_destroyFront_7: 7381637378495606924
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

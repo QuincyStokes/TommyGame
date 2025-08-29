@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      012 - sTV001_destroyBack_idle_0: 6117700367607805642
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

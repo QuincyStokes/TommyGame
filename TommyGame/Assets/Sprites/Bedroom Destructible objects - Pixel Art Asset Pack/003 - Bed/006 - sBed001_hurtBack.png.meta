@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      006 - sBed001_hurtBack_0: -4227519845699773647
+      006 - sBed001_hurtBack_1: 4364581666229729546
+      006 - sBed001_hurtBack_2: 4801161551122873660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

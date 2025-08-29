@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      005 - sChair001_destroyFront_0: -2571152121121784678
+      005 - sChair001_destroyFront_1: 1952717595301022737
+      005 - sChair001_destroyFront_2: -3419622514271401784
+      005 - sChair001_destroyFront_3: -5627793660233845501
+      005 - sChair001_destroyFront_4: -4642090503760645444
+      005 - sChair001_destroyFront_5: 8430962895204983398
+      005 - sChair001_destroyFront_6: 466134874430297109
+      005 - sChair001_destroyFront_7: 5711262252783818952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      004 - sCloset002_destroy_idle_0: 2949584844646188390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
