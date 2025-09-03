@@ -131,6 +131,7 @@ public class ScenarioManager : MonoBehaviour
         print("Doing Dialogue");
         dialogueText.text = "";
         dialogueParent.SetActive(true);
+        
         foreach (string str in dialogue)
         {
             foreach (char c in str)
@@ -139,6 +140,7 @@ public class ScenarioManager : MonoBehaviour
                 yield return new WaitForSeconds(textSpeed);
             }
             yield return new WaitForSeconds(1.5f);
+            
             dialogueText.text = "";
         }
         dialogueParent.SetActive(false);
@@ -163,23 +165,49 @@ public class ScenarioManager : MonoBehaviour
             StartCoroutine(FadeToBlack());
         }
 
+
     }
 
     private IEnumerator DoDecisionDialogue(List<string> dialogue)
     {
         dialogueText.text = "";
         dialogueParent.SetActive(true);
+
+        int speakerCounter = 1;
+        GameObject speaker2Scene = null;
+        if (currentScenario.hasSpeakerScene)
+        {
+            speaker2Scene = Instantiate(currentScenario.speaker2Scene);
+            speaker2Scene.SetActive(false);
+        }
+
         foreach (string str in dialogue)
         {
+            if (currentScenario.hasSpeakerScene)
+            {
+                //Swap between speaker 1 and 2
+                if (speakerCounter % 2 == 0)
+                {
+                    speaker2Scene.SetActive(true);
+                }
+                else
+                {
+                    speaker2Scene.SetActive(false);
+                }
+            }
             foreach (char c in str)
             {
                 dialogueText.text += c;
                 yield return new WaitForSeconds(textSpeed);
             }
+            speakerCounter++;
             yield return new WaitForSeconds(1.5f);
             dialogueText.text = "";
         }
         dialogueParent.SetActive(false);
+        
+        //Destroy speaker2scene
+        Destroy(speaker2Scene);
     }
 
     private IEnumerator DoScenarioTimer(float time)

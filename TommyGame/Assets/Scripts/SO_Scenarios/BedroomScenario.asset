@@ -16,6 +16,9 @@ MonoBehaviour:
     type: 3}
   option1Scenario: {fileID: 11400000, guid: 4bf3a70aacaf27f418100caef4de1510, type: 2}
   option2Scenario: {fileID: 11400000, guid: 610250277ebec7f4ba22ff319a18fd42, type: 2}
+  speaker2Scene: {fileID: 6426966457712302826, guid: c9a49c995ec9cad47895d3b68ff336a1,
+    type: 3}
+  scenarioStartPositions: []
   option1Positions:
   - {x: -8.5, y: 0.5}
   option2Positions: []
@@ -38,7 +41,9 @@ MonoBehaviour:
   - ..
   decisionTime: 20
   isCutscene: 0
-  isEnding: 0
+  isBadEnding: 0
+  isGoodEnding: 0
+  hasSpeakerScene: 1
   playerMoveSpeed: 0.8
   playerStartPosition: {x: 0, y: -3}
   playerScale: {x: 1, y: 1}

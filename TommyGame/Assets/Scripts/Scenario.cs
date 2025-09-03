@@ -12,6 +12,7 @@ public class Scenario : ScriptableObject
     public GameObject levelPrefab;
     public Scenario option1Scenario;
     public Scenario option2Scenario;
+    public GameObject speaker2Scene;
 
     //* ------------ Scenario-Specific Settings --------------- */
     [Tooltip("List of positions for the player to move to upon choosing an option.")]
@@ -28,6 +29,7 @@ public class Scenario : ScriptableObject
     public bool isCutscene;
     public bool isBadEnding; //showing the continue screen
     public bool isGoodEnding; //fade to black 
+    public bool hasSpeakerScene;
 
     //*-------------- Player ----------------- */
     public float playerMoveSpeed;

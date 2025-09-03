@@ -1,6 +1,6 @@
 Tommy's Game TODO List
 
-1. Create logic for portrait images along with dialogue
+1. Create logic for portrait images along with dialogue DONE
 2. No more fade to black,   
     a. Current scenario turns into an image, zooms out and appears inside of a picture frame
     b. Says "you completed the challenge"
@@ -8,6 +8,30 @@ Tommy's Game TODO List
 3. Run through and try to break the game to find bugs
 
 4. Start next scenario (flood)
+
+
+HOW TO DO #2
+Scenes always exist inside a Picture Frame sprite (really just needs to be the last one (leaf node))
+
+Hierarchy looks like:
+Picture Frame
+    -Sprite Mask (to clip everything inside the picture frame)
+        - Scenario Prefab (everything set to visible inside mask)
+        - Player (Set to visibible inside mask)
+
+
+
+
+When the ending actually happens
+- Spawn the "real world" scene BEHIND the current scene (above it in the hierarchy, or change sort layer)
+- Set material, which we can also lerp to black and white
+- Scale down the Picture Frame to desired size, revealing "real world"
+- Bonus points, Lerp it to a location
+- Display, "You Completed Challenge" at the top
+- Two buttons appear, RESTART and QUIT
+
+
+
 
 
 
