@@ -32,7 +32,9 @@ When the ending actually happens
 
 
 
-
+9/9 NOTES
+only the player turns gray, have to go into the children of the game prefab too
+make the background what tommy wants
 
 
 

@@ -20,6 +20,12 @@ public class ScenarioManager : MonoBehaviour
     public TMP_Text timeRemaining;
     public GameObject continueScreen;
     public Image blackScreen;
+    [Header("Picture Frame Settings")]
+    public Transform pictureFrame;
+    public Vector3 zoomTargetScale;
+    public float zoomTime;
+    public Material greyscaleMaterial;
+
 
     //* ------------------- Scenarios ------------------------- */
     [Header("Scenarios")]
@@ -27,7 +33,6 @@ public class ScenarioManager : MonoBehaviour
     public Scenario currentScenario;
     //* ---------------- Settings --------------- */
     public float textSpeed;
-    public float fadeTime;
 
     //* -------------- Player ---------- */
     public Player player;
@@ -65,7 +70,7 @@ public class ScenarioManager : MonoBehaviour
         button1Text.text = scenario.option1Text;
         button2Text.text = scenario.option2Text;
         player.Initialize(currentScenario.playerStartPosition, currentScenario.playerScale);
-        currentScenarioObject = Instantiate(scenario.levelPrefab);
+        currentScenarioObject = Instantiate(scenario.levelPrefab, pictureFrame);
         yield return DoMovement(scenario.scenarioStartPositions);
         yield return StartCoroutine(DoDialogue(scenario.scenarioDialogue));
     }
@@ -162,7 +167,7 @@ public class ScenarioManager : MonoBehaviour
 
         if (currentScenario.isGoodEnding)
         {
-            StartCoroutine(FadeToBlack());
+            StartCoroutine(ZoomToPictureFrame());
         }
 
 
@@ -227,19 +232,34 @@ public class ScenarioManager : MonoBehaviour
         GameOver();
     }
 
-    private IEnumerator FadeToBlack()
+    private IEnumerator ZoomToPictureFrame()
     {
-        float elapsed = 0f;
 
-        while (elapsed < fadeTime)
+        float elapsed = 0f;
+        Vector3 initialScale = pictureFrame.localScale;
+        while (elapsed < zoomTime)
         {
             elapsed += Time.deltaTime;
-            float t = elapsed / fadeTime;
+            float t = elapsed / zoomTime;
 
-            blackScreen.color = new Color(0, 0, 0, t);
+            //Can also lerp position here to put it where we want it.
+            pictureFrame.localScale = Vector3.Lerp(initialScale, zoomTargetScale, t);
             yield return null;
         }
-        CleanupCurrentScenario();
+
+        //Turn picture frame contents to greyscale.
+        SpriteRenderer sr;
+        for (int i = 1; i < pictureFrame.childCount; i++)
+        {
+
+            if (pictureFrame.GetChild(i).TryGetComponent(out sr))
+            {
+                sr.material = greyscaleMaterial;
+            }
+            
+        }
+        
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("MainMenu");
     }
 
