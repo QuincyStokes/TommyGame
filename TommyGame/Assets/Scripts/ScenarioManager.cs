@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -255,6 +253,16 @@ public class ScenarioManager : MonoBehaviour
             if (pictureFrame.GetChild(i).TryGetComponent(out sr))
             {
                 sr.material = greyscaleMaterial;
+            }
+            if (pictureFrame.GetChild(i).childCount != 0)
+            {
+                for (int j = 0; j < pictureFrame.GetChild(i).childCount; j++)
+                {
+                    if (pictureFrame.GetChild(i).GetChild(j).TryGetComponent(out sr))
+                    {
+                        sr.material = greyscaleMaterial;
+                    }
+                }
             }
             
         }

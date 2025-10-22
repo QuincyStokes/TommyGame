@@ -37,6 +37,33 @@ only the player turns gray, have to go into the children of the game prefab too
 make the background what tommy wants
 
 
+9/30 Emulator NOTES
+    Pixel 9
+Blue bars on the side show (background sprites aren't wide enough)
+Timer text overlaps the buttons
+Can't see the "Police" word on the dialogue screen
+In the main menu, player's starting position needs to be further to the left. 
+Timer overlaps the police
+
+    Google Tablet  
+TImer overlaps with buttons
+
+
+    Pixel Fold  
+Too zoomed in, player runs off edge of the screen
+
+Emulator Scores
+
+Pixel 9 : 4.5/10
+Google Tablet : 8/10
+Pixel Fold : 7.5
+
+
+FIXES:
+Selection screen background change color
+fix portrait on Winning scene
+Fix closet ending timeline
+Fix police screen overlapping timer text
 
 
 
