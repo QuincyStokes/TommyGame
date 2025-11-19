@@ -69,4 +69,82 @@ Fix police screen overlapping timer text
 
 
 
+**Have to play fire before flood*
+
+https://pixelbean.itch.io/fantasyworldbedroom
+https://free-game-assets.itch.io/water-pack-tileset-for-platformer-pixel-art
+https://static.vecteezy.com/system/resources/previews/031/601/231/non_2x/a-police-helicopter-designed-in-8-bit-pixel-a-pixel-art-illustration-vector.jpg
+https://jellytempo.itch.io/2d-pixel-art-rain-effect (Can also try making it ourselves?)
+Pixel art wallet (will need to make ourselves)
+House exterior scene, generate the image with AI
+Ladder for upstairs interior https://static.vecteezy.com/system/resources/previews/023/867/884/non_2x/climbing-step-ladder-safety-game-pixel-art-illustration-vector.jpg
+    (Will probably have to make one ourselves)
+
+
+Flood
+
+Where does the player start?
+Player is outside, it's raining
+	"It's raining so much"
+	**The outside is flooding already**
+	"I finally got a new house!"
+
+Player goes inside, into their room
+	"Thank goodness my new house is stable enough.."
+	** This SFX plays **https://www.youtube.com/watch?v=kc9-HJ9Rd4w
+	>The house starts filling up with water
+
+There's a time limit, as longer time goes on, it fills up the house.
+
+
+The room floods quickly
+1. Call 911 and try to go outside
+    -> Leads you to the living room
+    The water floods away your wallet, you have to make a decision
+    1. Chase after your wallet
+        -> Chase wallet, furniture hits you, you lose
+
+    2. Get to higher ground
+        -> Go upstairs, forget the wallet
+            Peek outside to see water flowing up, 
+        **New Game Mechanic**
+        1. You find a ladder to get to the roof
+            Player has to spam click to help the user get the ladder up.
+            -> If they don't click enough, the game ends.
+
+            -> If they do click enough, they get onto the roof
+                Police come in a helicopter, 
+                    50/50 CHANCE 	
+                        ->lightning strikes the helicopter, spins down into the building, killing everything. 
+                        -> Lightning does NOT strike, you make it out alive.
+            Game ends, fades to black, Words fade in red with a cool animation.
+                "You made all the right decisions, but unfortunately luck wasn't on your side.." 
+                
+                        
+
+
+2. Call 911 and stay in your room
+    -> Water keeps on filling
+    1. Go outside through the window
+        -> Water floods your room, you end up in the flood outside
+            You lose/die
+    2. Go outside the door
+        Too much water, can't open it, you have to go try the window, you end up in the flood outside.
+            You lose/die.
+				
+	
+	
+
+	
+
+
+	
+	
+
+
+
+
+
+
+
 
