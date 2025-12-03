@@ -113,7 +113,9 @@ public class ScenarioManager : MonoBehaviour
     private IEnumerator PlayCutscene()
     {
         yield return StartCoroutine(DoMovement(currentScenario.option1Positions));
+        yield return new WaitForSeconds(currentScenario.cutsceneHangTime);
         yield return StartCoroutine(NextScenario(currentScenario.option1Scenario));
+        
     }
 
 
@@ -121,7 +123,7 @@ public class ScenarioManager : MonoBehaviour
     {
         foreach (Vector2 pos in positions)
         {
-            yield return StartCoroutine(player.MoveTo(pos));
+            yield return StartCoroutine(player.MoveTo(pos, currentScenario.playerMoveSpeed));
         }
 
         //wait a second, and then move to next scenario

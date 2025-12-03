@@ -7,6 +7,7 @@ public class ContinueScreen : MonoBehaviour
 {
 
     public TMP_Text timeRemaining;
+    public string sceneToLoadOnLeave;
     public void LeaveGame()
     {
         SceneManager.LoadScene("MainMenu");
@@ -14,7 +15,7 @@ public class ContinueScreen : MonoBehaviour
 
     public void Continue()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(sceneToLoadOnLeave);
     }
 
     public void OnEnable()

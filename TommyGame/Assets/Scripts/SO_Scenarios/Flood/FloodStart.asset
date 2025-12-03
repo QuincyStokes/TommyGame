@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd83e1554dd3b3478119820e1d405ef, type: 3}
+  m_Name: FloodStart
+  m_EditorClassIdentifier: 
+  levelPrefab: {fileID: 9028691687038275277, guid: 7865d71563deddf42a55dcd97894a13b,
+    type: 3}
+  option1Scenario: {fileID: 11400000, guid: abdec470517d8174193d13996e029d33, type: 2}
+  option2Scenario: {fileID: 0}
+  speaker2Scene: {fileID: 0}
+  scenarioStartPositions: []
+  option1Positions: []
+  option2Positions: []
+  option1Text: 
+  option2Text: 
+  scenarioDialogue: []
+  option1Dialogue: []
+  option2Dialogue: []
+  decisionTime: 0
+  isCutscene: 1
+  cutsceneHangTime: 3
+  isBadEnding: 0
+  isGoodEnding: 0
+  hasSpeakerScene: 0
+  playerMoveSpeed: 0
+  playerStartPosition: {x: 11, y: 0}
+  playerScale: {x: 1, y: 1}

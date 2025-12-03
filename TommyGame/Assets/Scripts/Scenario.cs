@@ -25,6 +25,7 @@ public class Scenario : ScriptableObject
     public List<string> option2Dialogue;
     public float decisionTime;
     public bool isCutscene;
+    public float cutsceneHangTime;
     public bool isBadEnding; //showing the continue screen
     public bool isGoodEnding; //fade to black 
     public bool hasSpeakerScene;

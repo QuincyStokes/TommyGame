@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd83e1554dd3b3478119820e1d405ef, type: 3}
+  m_Name: FloodInsideBedroom
+  m_EditorClassIdentifier: 
+  levelPrefab: {fileID: 4046536155134697830, guid: dd5e628428a9ba94c9d7a1650dd87601,
+    type: 3}
+  option1Scenario: {fileID: 0}
+  option2Scenario: {fileID: 11400000, guid: 274921f3dbb572241adf2066bb405c00, type: 2}
+  speaker2Scene: {fileID: 0}
+  scenarioStartPositions: []
+  option1Positions:
+  - {x: 11, y: -5}
+  option2Positions:
+  - {x: -4, y: -3}
+  option1Text: Go to the living room.
+  option2Text: Get on your bed.
+  scenarioDialogue:
+  - I finally got a new house!
+  - Wow, its raining so much!
+  - Uh oh, the room is starting to flood!
+  option1Dialogue:
+  - I'd better get out of my room or I'm cooked.
+  option2Dialogue:
+  - Since the floor is flooding, I'll get on my bed!
+  decisionTime: 20
+  isCutscene: 0
+  cutsceneHangTime: 0
+  isBadEnding: 0
+  isGoodEnding: 0
+  hasSpeakerScene: 0
+  playerMoveSpeed: 0
+  playerStartPosition: {x: 0, y: -5}
+  playerScale: {x: 1.1, y: 1.1}

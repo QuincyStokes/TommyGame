@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdd83e1554dd3b3478119820e1d405ef, type: 3}
-  m_Name: FloodStart
+  m_Name: PlayerWashedAway
   m_EditorClassIdentifier: 
-  levelPrefab: {fileID: 8217349256186873185, guid: e4f126d0bda3fae4892c5d117f1b75ed,
+  levelPrefab: {fileID: 3577274392924649064, guid: 107424b0ee3cbd842ac844d5e28b25fa,
     type: 3}
   option1Scenario: {fileID: 0}
   option2Scenario: {fileID: 0}
   speaker2Scene: {fileID: 0}
-  scenarioStartPositions: []
+  scenarioStartPositions:
+  - {x: 10, y: -4.7}
   option1Positions: []
   option2Positions: []
   option1Text: 
   option2Text: 
-  scenarioDialogue:
-  - Its raining so much!
-  - I finally got a new house!
+  scenarioDialogue: []
   option1Dialogue: []
   option2Dialogue: []
   decisionTime: 0
-  isCutscene: 0
-  isBadEnding: 0
+  isCutscene: 1
+  cutsceneHangTime: 0
+  isBadEnding: 1
   isGoodEnding: 0
   hasSpeakerScene: 0
-  playerMoveSpeed: 0
-  playerStartPosition: {x: -4, y: -5}
-  playerScale: {x: 0.6, y: 0.6}
+  playerMoveSpeed: 2
+  playerStartPosition: {x: -5, y: -4.7}
+  playerScale: {x: 0.5, y: 0.5}
