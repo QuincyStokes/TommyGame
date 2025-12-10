@@ -100,7 +100,7 @@ There's a time limit, as longer time goes on, it fills up the house.
 
 
 The room floods quickly
-1. Call 911 and try to go outside
+1. Go to the living room
     -> Leads you to the living room
     The water floods away your wallet, you have to make a decision
     1. Chase after your wallet
@@ -125,14 +125,14 @@ The room floods quickly
                         
 
 
-2. Call 911 and stay in your room
+2. Get on your bed
     -> Water keeps on filling
-    1. Go outside through the window
+    -> You realize you need to get out
+    -> Try to get out through the door
+    -> Realize you can't, go for the window instead
+        Go outside through the window
         -> Water floods your room, you end up in the flood outside
             You lose/die
-    2. Go outside the door
-        Too much water, can't open it, you have to go try the window, you end up in the flood outside.
-            You lose/die.
 				
 	
 	

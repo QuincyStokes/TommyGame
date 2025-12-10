@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      walllamp_on_0: 4310313974451180557
+      walllamp_on_1: 4740382095077989648
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

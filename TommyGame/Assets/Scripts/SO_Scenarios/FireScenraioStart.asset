@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd83e1554dd3b3478119820e1d405ef, type: 3}
+  m_Name: FireScenraioStart
+  m_EditorClassIdentifier: 
+  levelPrefab: {fileID: 2827157747862304763, guid: a4672e6a1727ce14b9744971ab27ddc6,
+    type: 3}
+  option1Scenario: {fileID: 11400000, guid: c93bf3c6789c1724586f9c7983a6a22a, type: 2}
+  option2Scenario: {fileID: 11400000, guid: 0b09b822a06de7148bd6f0e5cfa8bef5, type: 2}
+  scenarioStartPositions:
+  - {x: 0, y: -3.5}
+  option1Positions:
+  - {x: -2.5, y: -2.5}
+  - {x: -12, y: 7}
+  option2Positions:
+  - {x: 0, y: -4.5}
+  - {x: -13, y: -4.5}
+  option1Text: Run Upstairs
+  option2Text: Run to the Closet
+  scenarioDialogue:
+  - What a great time to watch TV!
+  - Oh no, a fire!
+  - What should I do?
+  option1Dialogue:
+  - I need to go upstairs to escape the fire!
+  option2Dialogue:
+  - This should be safe!
+  decisionTime: 20
+  isCutscene: 0
+  isEnding: 0
+  playerMoveSpeed: 0.8
+  playerStartPosition: {x: -12, y: 6}
+  playerScale: {x: 1, y: 1}

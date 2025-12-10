@@ -18,7 +18,30 @@ public class AudioManager : MonoBehaviour
     {
         bgMusicSource.Play();
         yield return new WaitForSeconds(initialDelay);
-        StartCoroutine(SwapBGMusic(intenseBgMusic));
+        if(intenseBgMusic != null)
+        {
+            StartCoroutine(SwapBGMusic(intenseBgMusic));
+        }
+        else if (initialDelay > 0)
+        {
+            StartCoroutine(StopMusic());
+        }
+        
+    }
+
+    private IEnumerator StopMusic()
+    {
+        float elapsed = 0f;
+        float originalVolume = bgMusicSource.volume;
+        //Fade out old song
+        while (elapsed < transitionTime)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / transitionTime;
+            bgMusicSource.volume = (1 - t) * originalVolume;
+            yield return null;
+        }
+        bgMusicSource.Stop();
     }
     public IEnumerator SwapBGMusic(AudioClip newSong)
     {

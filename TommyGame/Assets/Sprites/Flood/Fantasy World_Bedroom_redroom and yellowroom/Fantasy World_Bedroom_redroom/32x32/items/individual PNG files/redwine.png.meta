@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      redwine_0: -4920593284788772171
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

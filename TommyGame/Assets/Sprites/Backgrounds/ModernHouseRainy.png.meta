@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ModernHouseRainy_0: -3265138410260179420
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

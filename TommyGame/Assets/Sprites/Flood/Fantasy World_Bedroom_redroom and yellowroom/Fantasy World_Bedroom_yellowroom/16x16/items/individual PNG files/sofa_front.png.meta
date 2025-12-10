@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sofa_front_0: -8129651822534632538
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
