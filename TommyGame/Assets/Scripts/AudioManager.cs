@@ -1,13 +1,34 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager Instance;
     public AudioSource bgMusicSource;
     public AudioClip firstBgMusic;
     public AudioClip intenseBgMusic;
     public float initialDelay;
     public float transitionTime;
+
+    private List<AudioSource> pool = new List<AudioSource>();
+    [SerializeField] private int poolSize = 10;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        InitializePool();   
+    }
+
     private void Start()
     {
         bgMusicSource.clip = firstBgMusic;
@@ -21,16 +42,15 @@ public class AudioManager : MonoBehaviour
         if(intenseBgMusic != null)
         {
             StartCoroutine(SwapBGMusic(intenseBgMusic));
-        }
-        else if (initialDelay > 0)
-        {
-            StartCoroutine(StopMusic());
-        }
-        
+        }        
     }
 
-    private IEnumerator StopMusic()
+    public IEnumerator StopMusic()
     {
+        if(bgMusicSource.isPlaying == false)
+        {
+            yield break;
+        }
         float elapsed = 0f;
         float originalVolume = bgMusicSource.volume;
         //Fade out old song
@@ -69,5 +89,30 @@ public class AudioManager : MonoBehaviour
             yield return null;
         }
         bgMusicSource.Play();
+    }
+
+    public void PlaySFX(AudioClip clip, float volume)
+    {
+        foreach (AudioSource source in pool)
+        {
+            if (!source.isPlaying)
+            {
+                source.clip = clip;
+                source.volume = volume;
+                source.Play();
+                return;
+            }
+        }
+    }
+
+    private void InitializePool()
+    {
+        for (int i = 0; i < poolSize; i++)
+        {
+            GameObject obj = new GameObject("AudioSource_" + i);
+            obj.transform.parent = this.transform;
+            AudioSource audioSource = obj.AddComponent<AudioSource>();
+            pool.Add(audioSource);
+        }
     }
 }

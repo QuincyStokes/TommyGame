@@ -3992,6 +3992,7 @@ MonoBehaviour:
   intenseBgMusic: {fileID: 0}
   initialDelay: 12
   transitionTime: 1.5
+  poolSize: 10
 --- !u!4 &1976726423
 Transform:
   m_ObjectHideFlags: 0
