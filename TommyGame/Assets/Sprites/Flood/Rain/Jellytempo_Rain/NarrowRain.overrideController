@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NarrowRain
+  m_Controller: {fileID: 9100000, guid: 8aa93b359531d034d831078d49f74fb8, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 75038e60f5b4a7741a8a8a78884d5573, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8b4d150cd51c7a94dabbc12fedf50ba8, type: 2}

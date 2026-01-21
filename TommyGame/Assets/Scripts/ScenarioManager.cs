@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,6 +8,9 @@ using UnityEngine.UI;
 
 public class ScenarioManager : MonoBehaviour
 {
+    public static ScenarioManager Instance; 
+
+
     //* -------------------- UI References ----------------------- */
     [Header("References")]
     public Button button1;
@@ -39,6 +43,21 @@ public class ScenarioManager : MonoBehaviour
     //* -------------- Internal ---------------- */
     private Coroutine timerCoroutine;
     private GameObject currentScenarioObject;
+
+    //* ------------ Events ------------ *//
+    public event Action OnOption2MovementEnded;
+    public event Action OnOption1MovementEnded;
+    public event Action OnOption1Pressed;
+    public event Action OnOption2Pressed;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
     private void Start()
     {
         LoadScenario(Scenarios[0]);
@@ -95,10 +114,13 @@ public class ScenarioManager : MonoBehaviour
     }
     private IEnumerator Button1Clicked()
     {
+        OnOption1Pressed?.Invoke();
         StopCoroutine(timerCoroutine);
         HideButtons();
         yield return StartCoroutine(DoDecisionDialogue(currentScenario.option1Dialogue));
         yield return StartCoroutine(DoMovement(currentScenario.option1Positions));
+        Debug.Log("Invoking Option2MovementEnded");
+        OnOption1MovementEnded?.Invoke();
         yield return StartCoroutine(NextScenario(currentScenario.option1Scenario));
     }
     private IEnumerator Button2Clicked()
@@ -107,6 +129,8 @@ public class ScenarioManager : MonoBehaviour
         HideButtons();
         yield return StartCoroutine(DoDecisionDialogue(currentScenario.option2Dialogue));
         yield return StartCoroutine(DoMovement(currentScenario.option2Positions));
+        Debug.Log("Invoking Option2MovementEnded");
+        OnOption2MovementEnded?.Invoke();
         yield return StartCoroutine(NextScenario(currentScenario.option2Scenario));
     }
 

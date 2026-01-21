@@ -1,69 +1,10 @@
 Tommy's Game TODO List
 
-1. Create logic for portrait images along with dialogue DONE
-2. No more fade to black,   
-    a. Current scenario turns into an image, zooms out and appears inside of a picture frame
-    b. Says "you completed the challenge"
-    c. Loads back to scenario   (this all takes place in the GoodEnding logic in the manager)
-3. Run through and try to break the game to find bugs
+1/13 End Of Class Notes
+- Next step is putting a script on the ladder that listens to player screen taps. 
+    - As taps progress, moves the ladder to the right until a point is reached, then upwards into the opening.
 
-4. Start next scenario (flood)
-
-
-HOW TO DO #2
-Scenes always exist inside a Picture Frame sprite (really just needs to be the last one (leaf node))
-
-Hierarchy looks like:
-Picture Frame
-    -Sprite Mask (to clip everything inside the picture frame)
-        - Scenario Prefab (everything set to visible inside mask)
-        - Player (Set to visibible inside mask)
-
-
-
-
-When the ending actually happens
-- Spawn the "real world" scene BEHIND the current scene (above it in the hierarchy, or change sort layer)
-- Set material, which we can also lerp to black and white
-- Scale down the Picture Frame to desired size, revealing "real world"
-- Bonus points, Lerp it to a location
-- Display, "You Completed Challenge" at the top
-- Two buttons appear, RESTART and QUIT
-
-
-
-9/9 NOTES
-only the player turns gray, have to go into the children of the game prefab too
-make the background what tommy wants
-
-
-9/30 Emulator NOTES
-    Pixel 9
-Blue bars on the side show (background sprites aren't wide enough)
-Timer text overlaps the buttons
-Can't see the "Police" word on the dialogue screen
-In the main menu, player's starting position needs to be further to the left. 
-Timer overlaps the police
-
-    Google Tablet  
-TImer overlaps with buttons
-
-
-    Pixel Fold  
-Too zoomed in, player runs off edge of the screen
-
-Emulator Scores
-
-Pixel 9 : 4.5/10
-Google Tablet : 8/10
-Pixel Fold : 7.5
-
-
-FIXES:
-Selection screen background change color
-fix portrait on Winning scene
-Fix closet ending timeline
-Fix police screen overlapping timer text
+    Need to give them some limited amount of time to do it.
 
 
 
@@ -110,15 +51,19 @@ The room floods quickly
         -> Go upstairs, forget the wallet
             Peek outside to see water flowing up, 
         **New Game Mechanic**
-        1. You find a ladder to get to the roof
+        1. player runs into the closet to grab a ladder, and they use the ladder to get up onto the roof
             Player has to spam click to help the user get the ladder up.
             -> If they don't click enough, the game ends.
 
             -> If they do click enough, they get onto the roof
                 Police come in a helicopter, 
-                    50/50 CHANCE 	
-                        ->lightning strikes the helicopter, spins down into the building, killing everything. 
-                        -> Lightning does NOT strike, you make it out alive.
+                    	-User has to click 100 times in 15 seconds to succeed
+
+                            If they haven't clicked enough times halfway through, the pilot says something like, "the rain is too strong"
+                                >lightning strikes the helicopter, spins down into the building, killing everything. 
+
+                            else
+                                -> Lightning does NOT strike, you make it out alive.
             Game ends, fades to black, Words fade in red with a cool animation.
                 "You made all the right decisions, but unfortunately luck wasn't on your side.." 
                 

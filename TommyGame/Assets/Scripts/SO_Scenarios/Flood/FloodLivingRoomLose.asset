@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd83e1554dd3b3478119820e1d405ef, type: 3}
+  m_Name: FloodLivingRoomLose
+  m_EditorClassIdentifier: 
+  levelPrefab: {fileID: 913900655022870883, guid: 547fec65782db7c44b7bd16f6f0dd577,
+    type: 3}
+  option1Scenario: {fileID: 0}
+  option2Scenario: {fileID: 0}
+  speaker2Scene: {fileID: 0}
+  scenarioStartPositions: []
+  option1Positions: []
+  option2Positions: []
+  option1Text: 
+  option2Text: 
+  scenarioDialogue: []
+  option1Dialogue: []
+  option2Dialogue: []
+  decisionTime: 0
+  isCutscene: 0
+  cutsceneHangTime: 0
+  isBadEnding: 1
+  isGoodEnding: 0
+  hasSpeakerScene: 0
+  playerMoveSpeed: 0
+  playerStartPosition: {x: 0, y: 0}
+  playerScale: {x: 1, y: 1}

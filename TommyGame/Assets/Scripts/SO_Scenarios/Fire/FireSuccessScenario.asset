@@ -16,6 +16,7 @@ MonoBehaviour:
     type: 3}
   option1Scenario: {fileID: 0}
   option2Scenario: {fileID: 0}
+  speaker2Scene: {fileID: 0}
   scenarioStartPositions: []
   option1Positions: []
   option2Positions: []
@@ -27,8 +28,10 @@ MonoBehaviour:
   option2Dialogue: []
   decisionTime: 0
   isCutscene: 0
+  cutsceneHangTime: 0
   isBadEnding: 0
   isGoodEnding: 1
-  playerMoveSpeed: 0
+  hasSpeakerScene: 0
+  playerMoveSpeed: 5
   playerStartPosition: {x: -7, y: -6}
   playerScale: {x: 0.6, y: 0.6}

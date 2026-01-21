@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float moveSpeed;
 
     private float startingMoveSpeed;
+    private bool isDead;
 
     public void Initialize(Vector3 startPos, Vector3 startScale)
     {
@@ -43,7 +44,22 @@ public class Player : MonoBehaviour
             transform.Translate(moveSpeed * Time.deltaTime * dir.normalized);
             yield return null;
         }
-        _anim.SetTrigger("Idle");
+        if(!isDead)
+        {
+            _anim.SetTrigger("Idle");
+            
+        }
+        
+    }
+
+    public void Die()
+    {
+        isDead = true;
+        StopAllCoroutines();
+        _anim.ResetTrigger("Idle");
+        _anim.ResetTrigger("Run");
+        Debug.Log("Player Dying!");
+        _anim.SetTrigger("Die");
     }
 
 }

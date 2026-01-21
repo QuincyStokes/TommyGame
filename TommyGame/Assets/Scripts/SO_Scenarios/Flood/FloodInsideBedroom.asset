@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelPrefab: {fileID: 4046536155134697830, guid: dd5e628428a9ba94c9d7a1650dd87601,
     type: 3}
-  option1Scenario: {fileID: 0}
+  option1Scenario: {fileID: 11400000, guid: dc559710f9afbd943986d98ff8e15be3, type: 2}
   option2Scenario: {fileID: 11400000, guid: 274921f3dbb572241adf2066bb405c00, type: 2}
   speaker2Scene: {fileID: 0}
   scenarioStartPositions: []
@@ -32,7 +32,7 @@ MonoBehaviour:
   - I'd better get out of my room or I'm cooked.
   option2Dialogue:
   - Since the floor is flooding, I'll get on my bed!
-  decisionTime: 20
+  decisionTime: 10
   isCutscene: 0
   cutsceneHangTime: 0
   isBadEnding: 0
