@@ -6,6 +6,7 @@ public class FloodHallwayBrain : MonoBehaviour
     private void Awake()
     {
         GameObject flood = GameObject.Find("FloodWater");
-        flood.SetActive(false);
+        if(flood != null)
+            flood.SetActive(false);
     }
 }

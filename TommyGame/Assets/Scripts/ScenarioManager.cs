@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -33,6 +34,7 @@ public class ScenarioManager : MonoBehaviour
     [Header("Scenarios")]
     public List<Scenario> Scenarios;
     public Scenario currentScenario;
+    
     //* ---------------- Settings --------------- */
     public float textSpeed;
 
@@ -78,18 +80,40 @@ public class ScenarioManager : MonoBehaviour
         currentScenario = scenario;
         HideButtons();
         timeRemaining.gameObject.SetActive(false);
-        StartCoroutine(RunScenario(scenario));
+        if(scenario is WinConditionalScenario)
+        {
+            //We have all of the same information for the scenario, but we'll leave the flow up to the scenario itself
+            WinConditionalScenario wcs = scenario as WinConditionalScenario;
+            wcs.OnScenarioCompleted += HandleConditionalScenarioCompleted;
+            wcs.OnScenarioLost += HandleConditionalScenarioLost;
+           
+            StartCoroutine(RunWinConditionScenario(wcs));
+        }
+        else
+        {
+            StartCoroutine(RunScenario(scenario));
+        }
+        
     }
 
     private IEnumerator RunScenario(Scenario scenario)
     {
-        
         button1Text.text = scenario.option1Text;
         button2Text.text = scenario.option2Text;
         player.Initialize(currentScenario.playerStartPosition, currentScenario.playerScale);
         currentScenarioObject = Instantiate(scenario.levelPrefab, pictureFrame);
-        yield return DoMovement(scenario.scenarioStartPositions);
+        yield return StartCoroutine(DoMovement(scenario.scenarioStartPositions));
         yield return StartCoroutine(DoDialogue(scenario.scenarioDialogue));
+    }
+
+
+    private IEnumerator RunWinConditionScenario(WinConditionalScenario wcs)
+    {
+        player.Initialize(currentScenario.playerStartPosition, currentScenario.playerScale);
+        currentScenarioObject = Instantiate(wcs.levelPrefab);
+        wcs.Initialize(currentScenarioObject);
+        yield return DoMovement(wcs.scenarioStartPositions);
+        timerCoroutine = StartCoroutine(DoScenarioTimer(wcs.decisionTime));
     }
 
     private void ShowButtons()
@@ -173,9 +197,14 @@ public class ScenarioManager : MonoBehaviour
             dialogueText.text = "";
         }
         dialogueParent.SetActive(false);
-        if (!currentScenario.isCutscene && !currentScenario.isGoodEnding && !currentScenario.isBadEnding)
+        if (!currentScenario.isCutscene && !currentScenario.isGoodEnding && !currentScenario.isBadEnding && !currentScenario.isInteractive)
         {
             ShowButtons();
+            timerCoroutine = StartCoroutine(DoScenarioTimer(currentScenario.decisionTime));
+        }
+
+        if(currentScenario.isInteractive)
+        {
             timerCoroutine = StartCoroutine(DoScenarioTimer(currentScenario.decisionTime));
         }
 
@@ -316,4 +345,35 @@ public class ScenarioManager : MonoBehaviour
         if(scenario != null)
             LoadScenario(scenario);
     }
+
+
+    //* ------------ Win conditional scenarios
+    private void HandleConditionalScenarioCompleted(WinConditionalScenario wcs)
+    {
+        Debug.Log("Scenario hears WinCOnditionalScenario copmleted.");
+        StopCoroutine(timerCoroutine);
+        StartCoroutine(WinConditionScenarioMovement(wcs));
+
+        if(wcs.isGoodEnding)
+        {
+            StartCoroutine(ZoomToPictureFrame());
+            SceneManager.LoadScene("MainMenu");
+        }
+        
+    }
+
+    private IEnumerator WinConditionScenarioMovement(WinConditionalScenario wcs)
+    {
+        yield return StartCoroutine(DoMovement(wcs.option1Positions));
+        yield return StartCoroutine(NextScenario(wcs.option1Scenario));
+       
+    }
+
+    private void HandleConditionalScenarioLost(WinConditionalScenario wcs)
+    {
+        //StartCoroutine(NextScenario(wcs.option2Scenario));
+        GameOver();
+    }
+
+
 }

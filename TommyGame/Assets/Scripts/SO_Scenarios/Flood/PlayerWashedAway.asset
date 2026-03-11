@@ -32,6 +32,7 @@ MonoBehaviour:
   isBadEnding: 1
   isGoodEnding: 0
   hasSpeakerScene: 0
+  isInteractive: 0
   playerMoveSpeed: 2
-  playerStartPosition: {x: -5, y: -4.7}
-  playerScale: {x: 0.5, y: 0.5}
+  playerStartPosition: {x: -2.38, y: 1.55}
+  playerScale: {x: 1, y: 1}

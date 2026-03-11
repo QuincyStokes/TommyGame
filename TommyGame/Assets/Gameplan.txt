@@ -1,13 +1,9 @@
 Tommy's Game TODO List
 
-1/13 End Of Class Notes
-- Next step is putting a script on the ladder that listens to player screen taps. 
-    - As taps progress, moves the ladder to the right until a point is reached, then upwards into the opening.
-
-    Need to give them some limited amount of time to do it.
-
-
-
+2/17 End of class notes
+- Helicopter implemented, ready to be used by RooftopBrain
+- Need to implement the taps on the rooftop to escape
+- water in the upstairs hallway is a little messy.
 
 
 **Have to play fire before flood*

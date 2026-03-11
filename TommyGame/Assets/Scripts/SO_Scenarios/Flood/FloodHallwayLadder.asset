@@ -25,12 +25,13 @@ MonoBehaviour:
   scenarioDialogue: []
   option1Dialogue: []
   option2Dialogue: []
-  decisionTime: 0
-  isCutscene: 1
-  cutsceneHangTime: 20
+  decisionTime: 15
+  isCutscene: 0
+  cutsceneHangTime: 0
   isBadEnding: 0
   isGoodEnding: 0
   hasSpeakerScene: 0
+  isInteractive: 1
   playerMoveSpeed: 0
   playerStartPosition: {x: 0, y: -4}
   playerScale: {x: 0.7, y: 0.7}

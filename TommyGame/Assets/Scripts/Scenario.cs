@@ -29,6 +29,7 @@ public class Scenario : ScriptableObject
     public bool isBadEnding; //showing the continue screen
     public bool isGoodEnding; //fade to black 
     public bool hasSpeakerScene;
+    public bool isInteractive;
 
     //*-------------- Player ----------------- */
     public float playerMoveSpeed;
@@ -37,7 +38,6 @@ public class Scenario : ScriptableObject
 
 
     //* -------------- Events ------------ */
-    public event Action OnScenarioFinished;
 
 
 

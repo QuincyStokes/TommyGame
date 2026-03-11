@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FireGame.unity
     guid: 788f0092a7371cc4a871a393f43c2b3a
+  - enabled: 1
+    path: Assets/Scenes/FloodGame.unity
+    guid: 167d5345165ece34c9ccdb1706b4fa2e
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
